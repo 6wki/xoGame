@@ -28,10 +28,13 @@ boxes.forEach((bx) => {
 });
 
 function counting() {
-  setInterval(() => {
+  let down = setInterval(() => {
     end--;
     p.innerHTML = `Restarting ${end}`;
   }, 1000);
+  if (end == 0) {
+    clearInterval(down);
+  }
   setTimeout(() => {
     window.location.reload();
   }, 4000);
