@@ -65,5 +65,7 @@ function playing() {
     winner(7, 8, 9, box[9]);
   } else if (box[7] == box[5] && box[5] == box[3] && box[7] !== "") {
     winner(7, 5, 3, box[3]);
+  } else if (box[3] == box[6] && box[6] == box[9] && box[3] !== "") {
+    winner(3, 6, 9, box[3]);
   }
 }
